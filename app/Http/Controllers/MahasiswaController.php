@@ -7,13 +7,18 @@ use Illuminate\Support\Facades\DB;
 
 class MahasiswaController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         // mengambil data dari tabel mahasiswa
         $mahasiswa = DB::table('mahasiswa')->get();
 
         //mengirim data mahasiswa ke view index
-        return view('index', ['mahasiswa' => $mahasiswa]);
+        return view('mahasiswa', ['mahasiswa' => $mahasiswa]);
     }
 
     public function tambah()

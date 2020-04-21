@@ -8,7 +8,7 @@
 
 <!-- Isi Bagian Konten -->
 @section('konten')
-<a href="/" class="btn btn-danger">Kembali</a>
+<a href="/mahasiswa" class="btn btn-danger">Kembali</a>
 <br>
 <br>
 <form action="/mahasiswa/simpan" method="post">
